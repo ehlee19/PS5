@@ -19,8 +19,7 @@ public class XMLReader {
 		//	Read the XML catalog into 'cat'
 		cat = ReadCatalog();
 		
-		//	Increase the price of each book
-		IncreasePrice(cat,0.10);
+		// Add cost to XML
 		
 		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);

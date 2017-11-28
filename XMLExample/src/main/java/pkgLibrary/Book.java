@@ -1,7 +1,13 @@
 package pkgLibrary;
 
+import java.io.File;
 import java.util.Date;
+import pkgExceptions.BookException;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,24 +21,77 @@ public class Book {
 	private double price;
 	private Date publish_date;
 	private String description;
+	private double cost;
 
 	public Book() {
 
 	}
 
-	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description)
-	{
+	public Book(String id, String author, String title, String genre, double price, Date publish_date,
+			String description, double cost) {
 		super();
 		this.id = id;
 		this.author = author;
 		this.title = title;
-		this.genre = genre;		
+		this.genre = genre;
 		this.price = price;
 		this.publish_date = publish_date;
 		this.description = description;
+		this.cost = cost;
+	}
+
+	public Book(String BookID) throws BookException {
+		Book Book = null;
+		Catalog cat = pkgLibrary.Book.ReadXMLFile();
+		for (Book b : cat.getBooks()) {
+			if (b.getId().equals(BookID)) {
+				Book = b;
+				break;
+			}
+		}
+		if (Book == null) {
+			System.out.println("Book does not exist");
+			throw new BookException(BookID);
+		}
+		this.id = Book.getId();
+		this.author = Book.getAuthor();
+		this.title = Book.getTitle();
+		this.genre = Book.getGenre();
+		this.price = Book.getPrice();
+		this.publish_date = Book.getPublish_date();
+		this.description = Book.getDescription();
+		this.cost = Book.getCost();
 	}
 	
- 
+	public static Catalog ReadXMLFile() {
+
+		Catalog cat = null;
+
+		String basePath = new File("").getAbsolutePath();
+		basePath = basePath + "\\src\\main\\resources\\XMLFiles\\Books.xml";
+		File file = new File(basePath);
+
+		System.out.println(file.getAbsolutePath());
+		try {
+			JAXBContext jaxbContext = JAXBContext.newInstance(Catalog.class);
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			cat = (Catalog) jaxbUnmarshaller.unmarshal(file);
+			System.out.println(cat);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+
+		return cat;
+
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
 
 	public String getId() {
 		return id;
@@ -96,8 +155,5 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	
-	
 
 }
