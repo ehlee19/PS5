@@ -14,17 +14,18 @@ public class BookTest {
 
 	@Test
 	public void GetBookTest() throws BookException {
-		Book b = new Book("bk104");
+		Catalog cat = pkgLibrary.Book.ReadXMLFile();
+		Book b = new Book(cat, "bk104");
 		assertEquals("Fantasy", b.getGenre());
 		
 	}
 	@Test
 	public void AddBookTest() throws BookException {
-		Book b = new Book("bk113","author",  "title", "genre", 20.35, new Date(1990, 20, 10), 
+		Book b = new Book("bk115","author",  "title", "genre", 20.35, new Date(1990, 20, 10), 
 				"description", 15.21);
 		Catalog cat = b.ReadXMLFile();
 		cat.addBook(b);
-		assertEquals("title",new Book("bk113").getTitle());
+		assertEquals("title",new Book(cat, "bk113").getTitle());
 	}
 
 }

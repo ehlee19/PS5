@@ -40,9 +40,8 @@ public class Book {
 		this.cost = cost;
 	}
 
-	public Book(String BookID) throws BookException {
+	public Book(Catalog cat, String BookID) throws BookException {
 		Book Book = null;
-		Catalog cat = pkgLibrary.Book.ReadXMLFile();
 		for (Book b : cat.getBooks()) {
 			if (b.getId().equals(BookID)) {
 				Book = b;
