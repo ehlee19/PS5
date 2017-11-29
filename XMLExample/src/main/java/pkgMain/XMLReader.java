@@ -20,7 +20,7 @@ public class XMLReader {
 		cat = ReadCatalog();
 		
 		// Add cost to XML
-		
+		SetCost(cat, 0.8);
 		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);
 		
@@ -48,6 +48,15 @@ public class XMLReader {
 		return cat;
 	}
 	
+	private static Catalog SetCost(Catalog cat, double Percent)
+	{
+		for (Book b : cat.getBooks()) {
+			double newCost = (b.getPrice() * Percent);			
+			b.setCost(Math.round(newCost * 100.0) / 100.0);
+		}
+		
+		return cat;
+	}
 	private static void WriteXMLFile(Catalog cat) {
 		try {
 

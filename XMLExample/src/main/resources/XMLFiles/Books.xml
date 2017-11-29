@@ -2,7 +2,7 @@
 <catalog id="0">
     <book id="bk101">
         <author>Gambardella, Matthew</author>
-        <cost>0.0</cost>
+        <cost>39.56</cost>
         <description>An in-depth look at creating applications
 			with XML.
 		</description>
@@ -13,7 +13,7 @@
     </book>
     <book id="bk102">
         <author>Ralls, Kim</author>
-        <cost>0.0</cost>
+        <cost>5.24</cost>
         <description>
 			A former architect battles corporate zombies, an evil
 			sorceress, and her own childhood to become queen of the
@@ -26,7 +26,7 @@
     </book>
     <book id="bk103">
         <author>Corets, Eva</author>
-        <cost>0.0</cost>
+        <cost>5.24</cost>
         <description>
 			After the collapse of a nanotechnology society in England,
 			the young survivors lay the foundation for a new society.
@@ -38,7 +38,7 @@
     </book>
     <book id="bk104">
         <author>Corets, Eva</author>
-        <cost>0.0</cost>
+        <cost>5.24</cost>
         <description>In post-apocalypse England, the mysterious
 			agent known only as Oberon helps to create a new life
 			for the inhabitants of London. Sequel to Maeve
@@ -51,7 +51,7 @@
     </book>
     <book id="bk105">
         <author>Corets, Eva</author>
-        <cost>0.0</cost>
+        <cost>5.24</cost>
         <description>The two daughters of Maeve, half-sisters,
 			battle one another for control of England. Sequel to
 			Oberon's Legacy.
@@ -63,7 +63,7 @@
     </book>
     <book id="bk106">
         <author>Randall, Cynthia</author>
-        <cost>0.0</cost>
+        <cost>4.36</cost>
         <description>When Carla meets Paul at an ornithology
 			conference, tempers fly as feathers get ruffled.
 		</description>
@@ -74,7 +74,7 @@
     </book>
     <book id="bk107">
         <author>Thurman, Paula</author>
-        <cost>0.0</cost>
+        <cost>4.36</cost>
         <description>A deep sea diver finds true love twenty
 			thousand leagues beneath the sea.
 		</description>
@@ -85,7 +85,7 @@
     </book>
     <book id="bk108">
         <author>Knorr, Stefan</author>
-        <cost>0.0</cost>
+        <cost>4.36</cost>
         <description>An anthology of horror stories about roaches,
 			centipedes, scorpions and other insects.
 		</description>
@@ -96,7 +96,7 @@
     </book>
     <book id="bk109">
         <author>Kress, Peter</author>
-        <cost>0.0</cost>
+        <cost>6.12</cost>
         <description>After an inadvertant trip through a Heisenberg
 			Uncertainty Device, James Salway discovers the problems
 			of being quantum.
@@ -108,7 +108,7 @@
     </book>
     <book id="bk110">
         <author>O'Brien, Tim</author>
-        <cost>0.0</cost>
+        <cost>32.52</cost>
         <description>Microsoft's .NET initiative is explored in
 			detail in this deep programmer's reference.
 		</description>
@@ -119,7 +119,7 @@
     </book>
     <book id="bk111">
         <author>O'Brien, Tim</author>
-        <cost>0.0</cost>
+        <cost>32.52</cost>
         <description>The Microsoft MSXML3 parser is covered in
 			detail, with attention to XML DOM interfaces, XSLT processing,
 			SAX and more.
@@ -131,7 +131,7 @@
     </book>
     <book id="bk112">
         <author>Galos, Mike</author>
-        <cost>0.0</cost>
+        <cost>43.96</cost>
         <description>Microsoft Visual Studio 7 is explored in depth,
 			looking at how Visual Basic, Visual C++, C#, and ASP+ are
 			integrated into a comprehensive development
@@ -144,7 +144,7 @@
     </book>
     <book id="bk113">
         <author>author</author>
-        <cost>15.21</cost>
+        <cost>16.28</cost>
         <description>description</description>
         <genre>genre</genre>
         <price>20.35</price>
