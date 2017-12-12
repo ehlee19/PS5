@@ -160,4 +160,13 @@
         <publish_date>3891-09-10T00:00:00-04:00</publish_date>
         <title>title</title>
     </book>
+    <book id="bk115">
+        <author>author</author>
+        <cost>15.21</cost>
+        <description>description</description>
+        <genre>genre</genre>
+        <price>20.35</price>
+        <publish_date>3891-09-10T00:00:00-04:00</publish_date>
+        <title>title</title>
+    </book>
 </catalog>

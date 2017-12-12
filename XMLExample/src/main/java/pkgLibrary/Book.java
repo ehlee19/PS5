@@ -26,7 +26,6 @@ public class Book {
 	public Book() {
 
 	}
-
 	public Book(String id, String author, String title, String genre, double price, Date publish_date,
 			String description, double cost) {
 		super();

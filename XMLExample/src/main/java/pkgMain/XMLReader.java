@@ -15,20 +15,11 @@ public class XMLReader {
 	public static void main(String[] args) {
 
 		Catalog cat = null;
-		
-		//	Read the XML catalog into 'cat'
 		cat = ReadCatalog();
-		
-		// Add cost to XML
 		SetCost(cat, 0.8);
-		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);
 		
 	}
-
-
-	
-	
 	private static Catalog ReadCatalog() {
 		Catalog cat = ReadXMLFile();
 		

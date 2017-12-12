@@ -15,8 +15,8 @@ public class BookTest {
 	@Test
 	public void GetBookTest() throws BookException {
 		Catalog cat = pkgLibrary.Book.ReadXMLFile();
-		Book b = new Book(cat, "bk104");
-		assertEquals("Fantasy", b.getGenre());
+		Book b = new Book(cat, "bk110");
+		assertEquals("Computer", b.getGenre());
 		
 	}
 	@Test

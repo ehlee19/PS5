@@ -20,8 +20,6 @@ public class Catalog {
 	
 	@XmlElement(name="book")
 	ArrayList<Book> books;
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -33,8 +31,6 @@ public class Catalog {
 	public ArrayList<Book> getBooks() {
 		return books;
 	}
-	
-
 	public void setBooks(ArrayList<Book> books) {
 		this.books = books;
 	}
@@ -58,19 +54,14 @@ public class Catalog {
 			String basePath = new File("").getAbsolutePath();
 			basePath = basePath + "\\src\\main\\resources\\XMLFiles\\Books.xml";
 			File file = new File(basePath);
-
 			JAXBContext jaxbContext = JAXBContext.newInstance(Catalog.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-			// output pretty printed
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
 			jaxbMarshaller.marshal(cat, file);
 			jaxbMarshaller.marshal(cat, System.out);
 
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-	}
-	
+	}	
 }

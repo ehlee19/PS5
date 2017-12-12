@@ -51,11 +51,7 @@ public class XMLXPath {
 			builder = factory.newDocumentBuilder();
 
 			doc = builder.parse(file);
-
-			// Create XPathFactory object
 			XPathFactory xpathFactory = XPathFactory.newInstance();
-
-			// Create XPath object
 			XPath xpath = xpathFactory.newXPath();
 
 			String name = getBookTitleById(doc, xpath, "bk107");
@@ -75,15 +71,11 @@ public class XMLXPath {
 				System.out.println(b.getDescription());
 			}
 
-
-
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
 
 	}
-
-
 
 	private static ArrayList<Book> getBooksByCost(Document doc, XPath xpath, double cost) {
 		ArrayList<Book> books = new ArrayList<Book>();
